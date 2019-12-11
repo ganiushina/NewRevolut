@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NewRevolut</string>
+    <string name="textviewVal" />
+    <string name="textViewCurrency" />
+    <string name="network_error">Network error</string>
+    <string name="todo">TODO</string>
+</resources>
