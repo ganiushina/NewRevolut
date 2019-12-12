@@ -2,7 +2,9 @@ package com.revolut.newrevolut.presenter;
 
 import android.annotation.SuppressLint;
 
+import com.revolut.newrevolut.api.DataSource;
 import com.revolut.newrevolut.entities.Currency;
+import com.revolut.newrevolut.network.OpenCurrencyRepo;
 import com.revolut.newrevolut.presenter.list.ICurrencyListPresenter;
 import com.revolut.newrevolut.repo.CurrenciesRepo;
 import com.revolut.newrevolut.view.MainView;
@@ -48,6 +50,7 @@ public class MainPresenter extends MvpPresenter<MainView> implements MvpView {
     private Scheduler mainThreadScheduler;
     private CurrenciesRepo repo;
     private CurrencyListPresenter currencyListPresenter;
+
 
 
     public MainPresenter(Scheduler scheduler) {
