@@ -2,8 +2,6 @@ package com.revolut.newrevolut.presenter;
 
 import android.annotation.SuppressLint;
 
-import com.arellomobile.mvp.InjectViewState;
-import com.arellomobile.mvp.MvpPresenter;
 import com.revolut.newrevolut.entities.Currency;
 import com.revolut.newrevolut.presenter.list.ICurrencyListPresenter;
 import com.revolut.newrevolut.repo.CurrenciesRepo;
@@ -15,10 +13,13 @@ import java.util.List;
 
 import io.reactivex.Scheduler;
 import io.reactivex.subjects.PublishSubject;
+import moxy.InjectViewState;
+import moxy.MvpPresenter;
+import moxy.MvpView;
 import timber.log.Timber;
 
 @InjectViewState
-public class MainPresenter extends MvpPresenter<MainView> {
+public class MainPresenter extends MvpPresenter<MainView> implements MvpView {
 
     class CurrencyListPresenter implements ICurrencyListPresenter {
 

@@ -6,7 +6,7 @@ import com.arellomobile.mvp.viewstate.strategy.OneExecutionStateStrategy;
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
 
 @StateStrategyType(value = AddToEndSingleStrategy.class)
-public interface MainView extends MvpView {
+public interface MainView extends MvpView, moxy.MvpView {
     void init();
     void updateList();
 
