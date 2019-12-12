@@ -18,9 +18,6 @@ import org.jetbrains.annotations.NotNull;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-
-
-
 public class CurrenciesRvAdapter extends RecyclerView.Adapter<CurrenciesRvAdapter.ViewHolder> {
     private ICurrencyListPresenter presenter;
 
@@ -32,7 +29,6 @@ public class CurrenciesRvAdapter extends RecyclerView.Adapter<CurrenciesRvAdapte
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false));
-
     }
 
     @Override

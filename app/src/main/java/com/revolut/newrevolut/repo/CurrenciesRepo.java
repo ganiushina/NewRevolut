@@ -3,6 +3,7 @@ package com.revolut.newrevolut.repo;
 import com.revolut.newrevolut.api.DataSource;
 import com.revolut.newrevolut.entities.Currency;
 import com.revolut.newrevolut.entities.CurrencyRequestRestModel;
+import com.revolut.newrevolut.network.OpenCurrencyRepo;
 
 import java.util.List;
 
@@ -13,9 +14,11 @@ public class CurrenciesRepo {
 
     private DataSource dataSource;
     private CurrencyRequestRestModel model;
+    private OpenCurrencyRepo repo;
 
     public CurrenciesRepo() {
-        this.dataSource = new DataSource(model);
+        this.repo =  OpenCurrencyRepo.getSingleton();
+        this.dataSource = new DataSource(repo);
     }
 
     public Single<List<Currency>> getCountries() {
